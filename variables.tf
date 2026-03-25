@@ -1,4 +1,4 @@
 variable "api_key" {
-  type = string
+  type        = string
   description = "API key generated in the tcg-sandbox account page"
 }
