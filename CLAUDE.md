@@ -159,7 +159,8 @@ For each card, prefer the **image-first flow**:
 **Text-first fallback** (when user doesn't want to create an image first):
 1. Ask for a natural-language description of the card
 2. Derive name, description, and attributes from that description
-3. Run `create-card.sh`, remind user to add art to `assets/sets/base/images/` later
+3. Create a image generation prompt for the user which gives an image generation AI enough information to generate a high-quality card image that fairly represents the natural language description for the card. Store the prompt in a temporary file "{card-name}-prompt.txt" at the same location that the image file should be stored in.
+4. Run `create-card.sh`, inform user of the prompt file from step 3 and tell them to replace the text file with the generated image file later.
 
 Repeat for each card until the set is complete.
 
